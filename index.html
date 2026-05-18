@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 4 - Capitã Marvel</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capitã Marvel Hover</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #d41e31, #491f8f);
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espaço entre texto e imagem */
+    overflow: hidden;
+  }
+
+  .info {
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .capitamarvel {
+    width: 250px;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  /* Efeito hover */
+  .container:hover .capitamarvel {
+    transform: translateX(100px); /* move para a direita */
+  }
+
+  .container:hover .info {
+    opacity: 1; /* mostra o texto */
+  }
+</style>
 </head>
 <body>
 
-    <div class="card-container">
-        
-        <div class="texto-info">
-            <h2>Capitã Marvel</h2>
-            <p>Carol Danvers é uma das heroínas mais poderosas do universo. Com força sobre-humana, capacidade de voar e a habilidade de projetar e absorver energia cósmica, ela protege a galáxia de ameaças interestelares.</p>
-        </div>
-
-        <div class="bloco-imagem">
-            <img src="capita-marvel.jpg" alt="Capitã Marvel">
-        </div>
-
-    </div>
+<div class="container">
+  <div class="info">
+    <h2>Capitã Marvel</h2>
+    <p>
+      Carol Danvers é uma super-heroína do Universo Marvel. Ela possui poderes de voo, superforça e energia cósmica.
+    </p>
+  </div>
+  <img src="capita-marvel.jpg" alt="Capitã Marvel" class="capitamarvel">
+</div>
 
 </body>
 </html>
